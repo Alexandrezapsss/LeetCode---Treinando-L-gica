@@ -23,5 +23,12 @@ let palavrasIsometricas = (n1, n2) =>{
         if(armazena[carac1] && armazena[carac1] !== carac2){
             return false;
         }
+        // Se o caractere de palavra1 não tiver uma correspondência, vamos estabelecê-la
+        if (!correspondencia[char1]) {
+            correspondencia[char1] = char2;
+        }
     }
+
+    //se chegarmos até aqui as palavras são isometricas
+    return true;
 }
